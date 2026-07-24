@@ -95,6 +95,8 @@
                 box-shadow: none;
                 background: white;
                 transform: none !important;
+                display: block !important;
+                /* Force block so it flows across pages */
             }
 
             #modal-detail>div {
@@ -102,6 +104,17 @@
                 overflow: visible !important;
                 box-shadow: none !important;
                 border: none !important;
+                display: block !important;
+            }
+
+            /* Prevent cutting rows and cards in half across pages */
+            #modal-variables-list>div,
+            #modal-badge-container,
+            #modal-recommendation,
+            .grid>div {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                margin-bottom: 8px;
             }
 
             /* Hide print and close buttons during print */
