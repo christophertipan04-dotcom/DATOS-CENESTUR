@@ -138,17 +138,19 @@
     <!-- Header -->
     <header class="static mt-4 sm:mt-6 mx-auto w-[92%] sm:w-[96%] max-w-7xl mb-4 sm:mb-6">
         <div class="flex items-center justify-between">
-            <!-- Branding -->
-            <div class="flex items-center space-x-3 sm:space-x-4">
-                <div class="flex items-center justify-center h-10 w-10 sm:h-14 sm:w-14 shrink-0">
+            <!-- Branding (Mini Tarjeta Estática) -->
+            <div
+                class="flex items-center space-x-3 sm:space-x-4 bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-3 sm:p-4">
+                <div
+                    class="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 shrink-0 bg-slate-50 rounded-xl border border-slate-100 p-1">
                     <img src="logo.png" alt="CENESTUR Logo" class="h-full w-full object-contain drop-shadow-sm">
                 </div>
-                <div class="flex flex-col justify-center">
-                    <h1 class="text-base sm:text-2xl font-black tracking-wider text-slate-800 leading-tight uppercase">
+                <div class="flex flex-col justify-center pr-2">
+                    <h1 class="text-base sm:text-xl font-black tracking-wider text-slate-800 leading-tight uppercase">
                         Base de Datos
                     </h1>
                     <p
-                        class="text-[10px] sm:text-sm text-slate-500 font-bold flex items-center mt-0.5 sm:mt-1 tracking-wide uppercase">
+                        class="text-[10px] sm:text-xs text-slate-500 font-bold flex items-center mt-0.5 tracking-wide uppercase">
                         <i class="fa-solid fa-location-dot text-amber-500 mr-1.5 animate-pulse"></i> Mitad del Mundo
                     </p>
                 </div>
@@ -169,7 +171,6 @@
                     <i class="fa-solid fa-chart-pie"></i> Informe Consolidado
                 </button>
             </nav>
-        </div>
         </div>
     </header>
 
@@ -238,7 +239,7 @@
             </div>
 
             <!-- Main Form Card -->
-            <form id="baseline-form" onsubmit="handleFormSubmit(event)"
+            <form id="baseline-form" onsubmit="handleFormSubmit(event)" novalidate
                 class="bg-white rounded-3xl shadow-xl border border-slate-200 p-4 sm:p-6 md:p-8 space-y-8">
 
                 <!-- STEP 1: Datos Generales -->
@@ -1219,6 +1220,25 @@
         // Submit handler
         function handleFormSubmit(e) {
             e.preventDefault();
+
+            const form = document.getElementById('baseline-form');
+            if (!form.checkValidity()) {
+                // Find the first invalid element
+                const firstInvalid = form.querySelector(':invalid');
+                if (firstInvalid) {
+                    // Find which step it belongs to
+                    const stepDiv = firstInvalid.closest('[id^="step-"]');
+                    if (stepDiv) {
+                        const stepNum = parseInt(stepDiv.id.replace('step-', ''));
+                        goToStep(stepNum);
+
+                        // Small delay to allow CSS to display the step before focusing
+                        setTimeout(() => firstInvalid.focus(), 100);
+                    }
+                }
+                alert('Por favor, complete todos los campos obligatorios (*) antes de guardar la ficha.');
+                return;
+            }
 
             // Gather channels
             const channels = [];
