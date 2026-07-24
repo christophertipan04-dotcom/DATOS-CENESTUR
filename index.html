@@ -1556,10 +1556,8 @@
             ]);
 
             const csvContent = "data:text/csv;charset=utf-8,\uFEFF" +
-                headers.join(",") + "\
-" +
-                rows.map(e => e.join(",")).join("\
-");
+                headers.join(";") + "\n" +
+                rows.map(e => e.join(";")).join("\n");
 
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement("a");
@@ -1592,7 +1590,13 @@
             const total = records.length;
             document.getElementById('stat-total').innerText = total;
 
-            if (total === 0) return;
+            if (total === 0) {
+                document.getElementById('stat-avg-score').innerText = '0 / 75';
+                document.getElementById('stat-digital-gap').innerText = '0%';
+                document.getElementById('stat-consolidated').innerText = '0%';
+                updateChartsData();
+                return;
+            }
 
             const sumScores = records.reduce((acc, r) => acc + r.totalScore, 0);
             const avg = Math.round(sumScores / total);
@@ -1681,7 +1685,15 @@
         }
 
         function updateChartsData() {
-            if (!radarChartInstance || !barChartInstance || records.length === 0) return;
+            if (!radarChartInstance || !barChartInstance) return;
+
+            if (records.length === 0) {
+                radarChartInstance.data.datasets[0].data = Array(15).fill(0);
+                radarChartInstance.update();
+                barChartInstance.data.datasets[0].data = [0, 0, 0, 0, 0, 0];
+                barChartInstance.update();
+                return;
+            }
 
             // Radarverages calculation
             const variableMeans = QUANTIFIABLE_VARIABLES.map(v => {
