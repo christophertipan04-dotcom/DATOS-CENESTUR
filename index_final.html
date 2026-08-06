@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="min-h-screen flex flex-col font-sans text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900 pb-28 md:pb-8 bg-slate-50">
-    
+<body
+    class="min-h-screen flex flex-col font-sans text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900 pb-28 md:pb-8 bg-slate-50">
+
     <!-- Splash Screen -->
-    <div id="splash-screen" class="fixed inset-0 z-50 bg-slate-50 flex items-center justify-center transition-opacity duration-1000">
+    <div id="splash-screen"
+        class="fixed inset-0 z-50 bg-slate-50 flex items-center justify-center transition-opacity duration-1000">
         <div class="flex flex-col items-center">
-            <img src="logo-Photoroom.png" alt="CENESTUR" class="h-56 w-auto object-contain animate-pulse drop-shadow-2xl mb-6">
+            <img src="logo-Photoroom.png" alt="CENESTUR"
+                class="h-56 w-auto object-contain animate-pulse drop-shadow-2xl mb-6">
             <div class="flex space-x-2">
                 <div class="w-3 h-3 bg-amber-500 rounded-full animate-bounce" style="animation-delay: 0s"></div>
                 <div class="w-3 h-3 bg-amber-600 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
@@ -28,23 +31,35 @@
     </div>
 
     <!-- Background Pattern -->
-    <div class="fixed inset-0 opacity-[0.03] pointer-events-none z-[-1]" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230f172a\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="fixed inset-0 opacity-[0.03] pointer-events-none z-[-1]"
+        style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230f172a\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+    </div>
 
     <!-- Header -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm shadow-slate-200/50 backdrop-blur-md bg-white/90">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <header
+        class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm shadow-slate-200/50 backdrop-blur-md bg-white/90">
+        <div
+            class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-4">
                 <img src="logo-Photoroom.png" alt="CENESTUR" class="h-12 sm:h-14 w-auto object-contain drop-shadow-md">
                 <div class="hidden sm:block h-10 w-px bg-slate-200"></div>
                 <div class="text-center sm:text-left">
-                    <h1 class="text-lg sm:text-xl font-black text-slate-800 tracking-tight leading-tight">Proyecto Mitad <br class="hidden sm:block"><span class="text-amber-600">del Mundo</span></h1>
+                    <h1 class="text-lg sm:text-xl font-black text-slate-800 tracking-tight leading-tight">Proyecto Mitad
+                        <br class="hidden sm:block"><span class="text-amber-600">del Mundo</span>
+                    </h1>
                 </div>
             </div>
             <!-- Desktop Nav -->
             <nav class="hidden md:flex bg-slate-100 p-1 rounded-2xl shadow-inner border border-slate-200">
-                <button id="nav-form-btn" onclick="switchTab('tab-form')" class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 bg-white text-amber-600 shadow-sm border border-amber-200 flex items-center gap-2"><i class="fa-solid fa-pen-to-square"></i> Nueva Ficha</button>
-                <button id="nav-records-btn" onclick="switchTab('tab-records')" class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700 hover:bg-slate-50 border border-transparent flex items-center gap-2"><i class="fa-solid fa-database"></i> Registros</button>
-                <button id="nav-dashboard-btn" onclick="switchTab('tab-dashboard')" class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700 hover:bg-slate-50 border border-transparent flex items-center gap-2"><i class="fa-solid fa-chart-pie"></i> Informe</button>
+                <button id="nav-form-btn" onclick="switchTab('tab-form')"
+                    class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 bg-white text-amber-600 shadow-sm border border-amber-200 flex items-center gap-2"><i
+                        class="fa-solid fa-pen-to-square"></i> Nueva Ficha</button>
+                <button id="nav-records-btn" onclick="switchTab('tab-records')"
+                    class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700 hover:bg-slate-50 border border-transparent flex items-center gap-2"><i
+                        class="fa-solid fa-database"></i> Registros</button>
+                <button id="nav-dashboard-btn" onclick="switchTab('tab-dashboard')"
+                    class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700 hover:bg-slate-50 border border-transparent flex items-center gap-2"><i
+                        class="fa-solid fa-chart-pie"></i> Informe</button>
             </nav>
         </div>
     </header>
@@ -52,175 +67,296 @@
     <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
         <!-- FORMULARIO TAB -->
         <section id="tab-form" class="tab-content space-y-6">
-            <div class="bg-gradient-to-br from-amber-500 to-amber-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-amber-900/20 relative overflow-hidden">
+            <div
+                class="bg-gradient-to-br from-amber-500 to-amber-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-amber-900/20 relative overflow-hidden">
                 <div class="relative z-10">
                     <h2 class="text-2xl sm:text-3xl font-black mb-2 tracking-tight">Registro de Encuesta</h2>
-                    <p class="text-amber-100 font-medium text-sm sm:text-base max-w-lg">Complete los datos de la ficha. Por favor, asegúrese de llenar todos los campos obligatorios (*).</p>
+                    <p class="text-amber-100 font-medium text-sm sm:text-base max-w-lg">Complete los datos de la ficha.
+                        Por favor, asegúrese de llenar todos los campos obligatorios (*).</p>
                 </div>
-                <i class="fa-solid fa-clipboard-question absolute -right-4 -bottom-8 text-8xl opacity-20 transform -rotate-12"></i>
+                <i
+                    class="fa-solid fa-clipboard-question absolute -right-4 -bottom-8 text-8xl opacity-20 transform -rotate-12"></i>
             </div>
 
-            <form id="baseline-form" class="space-y-6 sm:space-y-8 pb-10" onsubmit="event.preventDefault(); submitForm();">
-                
+            <form id="baseline-form" class="space-y-6 sm:space-y-8 pb-10"
+                onsubmit="event.preventDefault(); submitForm();">
+
                 <!-- ID/INFO LOCAL -->
                 <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/60 relative group">
                     <div class="absolute top-0 left-0 w-2 h-full bg-slate-800 rounded-l-3xl"></div>
                     <div class="mb-6 flex items-center gap-3">
-                        <div class="bg-slate-100 p-3 rounded-xl text-slate-700"><i class="fa-solid fa-store fa-lg"></i></div>
+                        <div class="bg-slate-100 p-3 rounded-xl text-slate-700"><i class="fa-solid fa-store fa-lg"></i>
+                        </div>
                         <h3 class="text-xl font-bold text-slate-800 tracking-tight">Información del Local</h3>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Nombre del Negocio <span class="text-rose-500">*</span></label>
-                            <input type="text" id="nombre_negocio" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium" required>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Nombre del Negocio <span
+                                    class="text-rose-500">*</span></label>
+                            <input type="text" id="nombre_negocio"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium"
+                                required>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Nombre del Propietario / Encuestado <span class="text-rose-500">*</span></label>
-                            <input type="text" id="propietario" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium" required>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Nombre del Propietario /
+                                Encuestado <span class="text-rose-500">*</span></label>
+                            <input type="text" id="propietario"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium"
+                                required>
                         </div>
                         <div class="sm:col-span-2">
-                            <label class="block text-sm font-bold text-slate-700 mb-2">Ubicación / Sector <span class="text-rose-500">*</span></label>
-                            <input type="text" id="ubicacion" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium" required>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Ubicación / Sector <span
+                                    class="text-rose-500">*</span></label>
+                            <input type="text" id="ubicacion"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium"
+                                required>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-slate-700 mb-2">Teléfono (Opcional)</label>
-                            <input type="tel" id="telefono" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium">
+                            <input type="tel" id="telefono"
+                                class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-all text-sm font-medium">
                         </div>
                     </div>
                 </div>
 
                 <!-- SECTION 1: Datos Generales -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
-                    <button type="button" onclick="toggleSection('sec1')" class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
+                    <button type="button" onclick="toggleSection('sec1')"
+                        class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
                         <div class="flex items-center gap-4">
-                            <div class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner"><i class="fa-solid fa-user"></i></div>
+                            <div
+                                class="bg-indigo-100 text-indigo-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
                             <h3 class="text-lg font-bold text-slate-800">1. Datos Generales y Perfil</h3>
                         </div>
-                        <i id="icon-sec1" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 transform rotate-180"></i>
+                        <i id="icon-sec1"
+                            class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300 transform rotate-180"></i>
                     </button>
                     <div id="content-sec1" class="px-6 py-6 space-y-8 block">
                         <!-- Q1 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">1. Sexo <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">1. Sexo <span
+                                    class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1" value="Hombre" class="w-4 h-4 text-amber-600 focus:ring-amber-500" required> <span class="text-sm font-medium">Hombre</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1" value="Mujer" class="w-4 h-4 text-amber-600 focus:ring-amber-500"> <span class="text-sm font-medium">Mujer</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1" value="Prefiero no decirlo" class="w-4 h-4 text-amber-600 focus:ring-amber-500"> <span class="text-sm font-medium">Prefiero no decirlo</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1"
+                                        value="Hombre" class="w-4 h-4 text-amber-600 focus:ring-amber-500" required>
+                                    <span class="text-sm font-medium">Hombre</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1"
+                                        value="Mujer" class="w-4 h-4 text-amber-600 focus:ring-amber-500"> <span
+                                        class="text-sm font-medium">Mujer</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q1"
+                                        value="Prefiero no decirlo" class="w-4 h-4 text-amber-600 focus:ring-amber-500">
+                                    <span class="text-sm font-medium">Prefiero no decirlo</span></label>
                             </div>
                         </div>
                         <!-- Q2 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">2. Edad <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">2. Edad <span
+                                    class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="18-25" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">18-25</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="26-35" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">26-35</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="36-45" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">36-45</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="46-55" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">46-55</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2" value="Más de 55" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de 55</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2"
+                                        value="18-25" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">18-25</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2"
+                                        value="26-35" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">26-35</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2"
+                                        value="36-45" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">36-45</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2"
+                                        value="46-55" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">46-55</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q2"
+                                        value="Más de 55" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Más de 55</span></label>
                             </div>
                         </div>
                         <!-- Q3 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">3. Nivel de Instrucción <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">3. Nivel de Instrucción <span
+                                    class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="Básica" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Básica</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="Bachillerato" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Bachillerato</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="Superior" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Superior</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3" value="Ninguno" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Ninguno</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3"
+                                        value="Básica" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Básica</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3"
+                                        value="Bachillerato" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Bachillerato</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3"
+                                        value="Superior" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Superior</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q3"
+                                        value="Ninguno" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Ninguno</span></label>
                             </div>
                         </div>
                         <!-- Q4 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">4. Años de experiencia en este negocio <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">4. Años de experiencia en este
+                                negocio <span class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="Menos de 1" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Menos de 1</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="1 a 3" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">1 a 3</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="4 a 6" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">4 a 6</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4" value="Más de 6" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de 6</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4"
+                                        value="Menos de 1" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Menos de 1</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4"
+                                        value="1 a 3" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">1 a 3</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4"
+                                        value="4 a 6" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">4 a 6</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q4"
+                                        value="Más de 6" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Más de 6</span></label>
                             </div>
                         </div>
                         <!-- Q5 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">5. Número de personas trabajando <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">5. Número de personas trabajando
+                                <span class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="1" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">1</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="2 a 3" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">2 a 3</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="4 a 5" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">4 a 5</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5" value="Más de 5" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de 5</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5"
+                                        value="1" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">1</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5"
+                                        value="2 a 3" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">2 a 3</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5"
+                                        value="4 a 5" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">4 a 5</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q5"
+                                        value="Más de 5" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Más de 5</span></label>
                             </div>
                         </div>
                         <!-- Q6 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">6. ¿Es esta su única fuente de ingresos? <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">6. ¿Es esta su única fuente de
+                                ingresos? <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q6" value="Sí" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Sí</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q6" value="No" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">No</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q6"
+                                        value="Sí" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Sí</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q6"
+                                        value="No" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">No</span></label>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- SECTION 2: Marketing -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
-                    <button type="button" onclick="toggleSection('sec2')" class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
+                    <button type="button" onclick="toggleSection('sec2')"
+                        class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
                         <div class="flex items-center gap-4">
-                            <div class="bg-sky-100 text-sky-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner"><i class="fa-solid fa-share-nodes"></i></div>
+                            <div
+                                class="bg-sky-100 text-sky-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
                             <h3 class="text-lg font-bold text-slate-800">2. Marketing y Redes Sociales</h3>
                         </div>
-                        <i id="icon-sec2" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        <i id="icon-sec2"
+                            class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
                     </button>
                     <div id="content-sec2" class="px-6 py-6 space-y-8 hidden">
                         <!-- Q7 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">7. ¿Usa redes sociales para el negocio? <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">7. ¿Usa redes sociales para el
+                                negocio? <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q7" value="Sí" onchange="toggleRedes(true)" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Sí</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q7" value="No" onchange="toggleRedes(false)" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">No</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q7"
+                                        value="Sí" onchange="toggleRedes(true)" class="w-4 h-4 text-amber-600" required>
+                                    <span class="text-sm font-medium">Sí</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q7"
+                                        value="No" onchange="toggleRedes(false)" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">No</span></label>
                             </div>
                         </div>
 
-                        <div id="redes-section" class="hidden space-y-8 bg-sky-50/50 p-5 rounded-2xl border border-sky-100">
+                        <div id="redes-section"
+                            class="hidden space-y-8 bg-sky-50/50 p-5 rounded-2xl border border-sky-100">
                             <!-- Q8 -->
                             <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-3">8. ¿Cuáles usa? (Seleccione varias)</label>
+                                <label class="block text-sm font-bold text-slate-700 mb-3">8. ¿Cuáles usa? (Seleccione
+                                    varias)</label>
                                 <div class="grid grid-cols-2 gap-3">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="Facebook" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">Facebook</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="Instagram" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">Instagram</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="TikTok" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">TikTok</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="WhatsApp Business" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">WhatsApp Business</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="Página web propia" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">Página web propia</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q8" value="YouTube" class="w-4 h-4 text-amber-600 rounded"> <span class="text-sm font-medium">YouTube</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="Facebook" class="w-4 h-4 text-amber-600 rounded"> <span
+                                            class="text-sm font-medium">Facebook</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="Instagram" class="w-4 h-4 text-amber-600 rounded"> <span
+                                            class="text-sm font-medium">Instagram</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="TikTok" class="w-4 h-4 text-amber-600 rounded"> <span
+                                            class="text-sm font-medium">TikTok</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="WhatsApp Business" class="w-4 h-4 text-amber-600 rounded">
+                                        <span class="text-sm font-medium">WhatsApp Business</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="Página web propia" class="w-4 h-4 text-amber-600 rounded">
+                                        <span class="text-sm font-medium">Página web propia</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="q8" value="YouTube" class="w-4 h-4 text-amber-600 rounded"> <span
+                                            class="text-sm font-medium">YouTube</span></label>
                                 </div>
                             </div>
                             <!-- Q9 -->
                             <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-3">9. Tiempo usando redes sociales</label>
+                                <label class="block text-sm font-bold text-slate-700 mb-3">9. Tiempo usando redes
+                                    sociales</label>
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9" value="Menos de 6 meses" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Menos de 6 meses</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9" value="6 a 12 meses" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">6 a 12 meses</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9" value="Más de 1 año" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de 1 año</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9"
+                                            value="Menos de 6 meses" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Menos de 6 meses</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9"
+                                            value="6 a 12 meses" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">6 a 12 meses</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q9"
+                                            value="Más de 1 año" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Más de 1 año</span></label>
                                 </div>
                             </div>
                             <!-- Q10 -->
                             <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-3">10. Frecuencia de publicación</label>
+                                <label class="block text-sm font-bold text-slate-700 mb-3">10. Frecuencia de
+                                    publicación</label>
                                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10" value="Diaria" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Diaria</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10" value="Semanal" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Semanal</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10" value="Mensual" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Mensual</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10" value="Nunca" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Nunca</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10"
+                                            value="Diaria" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Diaria</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10"
+                                            value="Semanal" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Semanal</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10"
+                                            value="Mensual" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Mensual</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q10"
+                                            value="Nunca" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Nunca</span></label>
                                 </div>
                             </div>
                             <!-- Q11 -->
                             <div>
-                                <label class="block text-sm font-bold text-slate-700 mb-3">11. Objetivo principal de usar redes</label>
+                                <label class="block text-sm font-bold text-slate-700 mb-3">11. Objetivo principal de
+                                    usar redes</label>
                                 <div class="flex flex-wrap gap-4">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11" value="Vender" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Vender</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11" value="Informar" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Informar</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11" value="Crear comunidad" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Crear comunidad</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11"
+                                            value="Vender" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Vender</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11"
+                                            value="Informar" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Informar</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q11"
+                                            value="Crear comunidad" class="w-4 h-4 text-amber-600"> <span
+                                            class="text-sm font-medium">Crear comunidad</span></label>
                                     <div class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0">
                                         <input type="radio" name="q11" value="Otro" class="w-4 h-4 text-amber-600">
-                                        <input type="text" id="q11_otro" class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-48" placeholder="Otro...">
+                                        <input type="text" id="q11_otro"
+                                            class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-48"
+                                            placeholder="Otro...">
                                     </div>
                                 </div>
                             </div>
@@ -228,143 +364,248 @@
 
                         <!-- Q12 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">12. Nivel de Interacción (1: Bajo, 5: Alto) <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">12. Nivel de Interacción (1:
+                                Bajo, 5: Alto) <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span class="text-xs font-bold text-slate-500">1</span><input type="radio" name="q12" value="1" class="w-5 h-5 text-amber-600" required></label>
-                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span class="text-xs font-bold text-slate-500">2</span><input type="radio" name="q12" value="2" class="w-5 h-5 text-amber-600"></label>
-                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span class="text-xs font-bold text-slate-500">3</span><input type="radio" name="q12" value="3" class="w-5 h-5 text-amber-600"></label>
-                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span class="text-xs font-bold text-slate-500">4</span><input type="radio" name="q12" value="4" class="w-5 h-5 text-amber-600"></label>
-                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span class="text-xs font-bold text-slate-500">5</span><input type="radio" name="q12" value="5" class="w-5 h-5 text-amber-600"></label>
+                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span
+                                        class="text-xs font-bold text-slate-500">1</span><input type="radio" name="q12"
+                                        value="1" class="w-5 h-5 text-amber-600" required></label>
+                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span
+                                        class="text-xs font-bold text-slate-500">2</span><input type="radio" name="q12"
+                                        value="2" class="w-5 h-5 text-amber-600"></label>
+                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span
+                                        class="text-xs font-bold text-slate-500">3</span><input type="radio" name="q12"
+                                        value="3" class="w-5 h-5 text-amber-600"></label>
+                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span
+                                        class="text-xs font-bold text-slate-500">4</span><input type="radio" name="q12"
+                                        value="4" class="w-5 h-5 text-amber-600"></label>
+                                <label class="flex flex-col items-center gap-1 cursor-pointer"><span
+                                        class="text-xs font-bold text-slate-500">5</span><input type="radio" name="q12"
+                                        value="5" class="w-5 h-5 text-amber-600"></label>
                             </div>
                         </div>
                         <!-- Q13 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">13. ¿Ha invertido en publicidad pagada? <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">13. ¿Ha invertido en publicidad
+                                pagada? <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q13" value="Sí" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Sí</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q13" value="No" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">No</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q13"
+                                        value="Sí" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Sí</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q13"
+                                        value="No" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">No</span></label>
                             </div>
                         </div>
                         <!-- Q14 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">14. Resultados obtenidos <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">14. Resultados obtenidos <span
+                                    class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14" value="Positivos" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Positivos</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14" value="Neutros" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Neutros</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14" value="Negativos" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Negativos</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14"
+                                        value="Positivos" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Positivos</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14"
+                                        value="Neutros" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Neutros</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q14"
+                                        value="Negativos" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Negativos</span></label>
                             </div>
                         </div>
                         <!-- Q15 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">15. ¿Usa herramientas de medición? <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">15. ¿Usa herramientas de
+                                medición? <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q15" value="Sí" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Sí</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q15" value="No" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">No</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q15"
+                                        value="Sí" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Sí</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q15"
+                                        value="No" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">No</span></label>
                             </div>
                         </div>
                         <!-- Q16 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">16. ¿Tiene un calendario de contenidos? <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">16. ¿Tiene un calendario de
+                                contenidos? <span class="text-rose-500">*</span></label>
                             <div class="flex gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q16" value="Sí" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Sí</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q16" value="No" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">No</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q16"
+                                        value="Sí" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Sí</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q16"
+                                        value="No" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">No</span></label>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- SECTION 3: Finanzas y Operaciones -->
-                <div class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
-                    <button type="button" onclick="toggleSection('sec3')" class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
+                <div
+                    class="bg-white rounded-3xl shadow-sm border border-slate-200/60 overflow-hidden accordion-section">
+                    <button type="button" onclick="toggleSection('sec3')"
+                        class="w-full text-left px-6 py-5 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors border-b border-slate-200">
                         <div class="flex items-center gap-4">
-                            <div class="bg-emerald-100 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner"><i class="fa-solid fa-chart-line"></i></div>
+                            <div
+                                class="bg-emerald-100 text-emerald-600 w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-inner">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
                             <h3 class="text-lg font-bold text-slate-800">3. Operaciones y Finanzas</h3>
                         </div>
-                        <i id="icon-sec3" class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                        <i id="icon-sec3"
+                            class="fa-solid fa-chevron-down text-slate-400 transition-transform duration-300"></i>
                     </button>
                     <div id="content-sec3" class="px-6 py-6 space-y-8 hidden">
                         <!-- Q17 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">17. Método de pago más usado <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">17. Método de pago más usado
+                                <span class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17" value="Efectivo" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Efectivo</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17" value="Transferencia / De Una" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Transferencia / De Una</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17" value="Tarjeta" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Tarjeta</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17" value="Otro" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Otro</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17"
+                                        value="Efectivo" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Efectivo</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17"
+                                        value="Transferencia / De Una" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Transferencia / De Una</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17"
+                                        value="Tarjeta" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Tarjeta</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q17"
+                                        value="Otro" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Otro</span></label>
                             </div>
                         </div>
                         <!-- Q18 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">18. Práctica regular en su negocio <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">18. Práctica regular en su
+                                negocio <span class="text-rose-500">*</span></label>
                             <div class="flex flex-col gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18" value="Llevar registro de ventas" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Llevar registro de ventas</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18" value="Control de inventario" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Control de inventario</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18" value="Cuenta bancaria separada" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Cuenta bancaria separada</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18"
+                                        value="Llevar registro de ventas" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Llevar registro de ventas</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18"
+                                        value="Control de inventario" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Control de inventario</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q18"
+                                        value="Cuenta bancaria separada" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Cuenta bancaria separada</span></label>
                             </div>
                         </div>
                         <!-- Q19 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">19. Cómo fija el precio de sus productos <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">19. Cómo fija el precio de sus
+                                productos <span class="text-rose-500">*</span></label>
                             <div class="flex flex-col gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19" value="Costo + margen" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Costo + margen</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19" value="Según competencia" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Según competencia</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19" value="Percepción del cliente" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Percepción del cliente</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19"
+                                        value="Costo + margen" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Costo + margen</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19"
+                                        value="Según competencia" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Según competencia</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q19"
+                                        value="Percepción del cliente" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Percepción del cliente</span></label>
                                 <div class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0">
                                     <input type="radio" name="q19" value="Otro" class="w-4 h-4 text-amber-600">
-                                    <input type="text" id="q19_otro" class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-48" placeholder="Otro...">
+                                    <input type="text" id="q19_otro"
+                                        class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-48"
+                                        placeholder="Otro...">
                                 </div>
                             </div>
                         </div>
                         <!-- Q20 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">20. Ganancias mensuales proyectadas <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">20. Ganancias mensuales
+                                proyectadas <span class="text-rose-500">*</span></label>
                             <div class="flex flex-wrap gap-4">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20" value="Altas" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Altas</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20" value="Medias" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Medias</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20" value="Bajas" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Bajas</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20" value="Nulas" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Nulas</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20"
+                                        value="Altas" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Altas</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20"
+                                        value="Medias" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Medias</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20"
+                                        value="Bajas" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Bajas</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q20"
+                                        value="Nulas" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Nulas</span></label>
                                 <div class="flex items-center gap-2 w-full sm:w-auto mt-2 sm:mt-0">
                                     <span class="text-sm font-medium text-slate-700">Porqué:</span>
-                                    <input type="text" id="q20_porque" class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-64" placeholder="Breve razón">
+                                    <input type="text" id="q20_porque"
+                                        class="px-3 py-1 text-sm border-b-2 border-slate-300 focus:border-amber-500 outline-none w-64"
+                                        placeholder="Breve razón">
                                 </div>
                             </div>
                         </div>
                         <!-- Q21 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">21. Ventas diarias estimadas <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">21. Ventas diarias estimadas
+                                <span class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21" value="Menos de 50" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Menos de $50</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21" value="50-100" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">$50 a $100</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21" value="101-200" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">$101 a $200</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21" value="Más de 200" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de $200</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21"
+                                        value="Menos de 50" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">Menos de $50</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21"
+                                        value="50-100" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">$50 a $100</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21"
+                                        value="101-200" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">$101 a $200</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q21"
+                                        value="Más de 200" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Más de $200</span></label>
                             </div>
                         </div>
                         <!-- Q22 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">22. Porcentaje de ganancias que reinvierte <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">22. Porcentaje de ganancias que
+                                reinvierte <span class="text-rose-500">*</span></label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22" value="0-10%" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">0-10%</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22" value="11-20%" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">11-20%</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22" value="21-30%" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">21-30%</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22" value="Más de 30%" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Más de 30%</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22"
+                                        value="0-10%" class="w-4 h-4 text-amber-600" required> <span
+                                        class="text-sm font-medium">0-10%</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22"
+                                        value="11-20%" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">11-20%</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22"
+                                        value="21-30%" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">21-30%</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q22"
+                                        value="Más de 30%" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Más de 30%</span></label>
                             </div>
                         </div>
                         <!-- Q23 -->
                         <div>
-                            <label class="block text-sm font-bold text-slate-700 mb-3">23. Cuál es el gasto que más consume los ingresos <span class="text-rose-500">*</span></label>
+                            <label class="block text-sm font-bold text-slate-700 mb-3">23. Cuál es el gasto que más
+                                consume los ingresos <span class="text-rose-500">*</span></label>
                             <div class="flex flex-col gap-3">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23" value="Compra de mercadería o insumos" class="w-4 h-4 text-amber-600" required> <span class="text-sm font-medium">Compra de mercadería o insumos</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23" value="Pago de alquiler y servicios" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Pago de alquiler y servicios</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23" value="Pago a empleados" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Pago a empleados</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23" value="Pago de deudas o préstamos" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Pago de deudas o préstamos</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23" value="Otros" class="w-4 h-4 text-amber-600"> <span class="text-sm font-medium">Otros</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23"
+                                        value="Compra de mercadería o insumos" class="w-4 h-4 text-amber-600" required>
+                                    <span class="text-sm font-medium">Compra de mercadería o insumos</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23"
+                                        value="Pago de alquiler y servicios" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Pago de alquiler y servicios</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23"
+                                        value="Pago a empleados" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Pago a empleados</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23"
+                                        value="Pago de deudas o préstamos" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Pago de deudas o préstamos</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="q23"
+                                        value="Otros" class="w-4 h-4 text-amber-600"> <span
+                                        class="text-sm font-medium">Otros</span></label>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" id="submit-btn" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 rounded-2xl shadow-lg shadow-slate-900/20 transition-all transform hover:-translate-y-1 active:translate-y-0 text-lg flex justify-center items-center gap-3">
+                <button type="submit" id="submit-btn"
+                    class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 rounded-2xl shadow-lg shadow-slate-900/20 transition-all transform hover:-translate-y-1 active:translate-y-0 text-lg flex justify-center items-center gap-3">
                     <i class="fa-solid fa-paper-plane"></i> Guardar y Registrar Encuesta
                 </button>
             </form>
@@ -375,15 +616,21 @@
             <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/60">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
                     <div>
-                        <h2 class="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight mb-1">Registros de Levantamiento</h2>
-                        <p class="text-sm sm:text-base text-slate-500">Emprendimientos encuestados en Mitad del Mundo.</p>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-800 tracking-tight mb-1">Registros de
+                            Levantamiento</h2>
+                        <p class="text-sm sm:text-base text-slate-500">Emprendimientos encuestados en Mitad del Mundo.
+                        </p>
                     </div>
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
                         <div class="flex gap-2">
-                            <input type="text" id="search-records" oninput="filterRecords()" placeholder="Buscar negocio..." class="flex-1 min-w-0 px-4 py-2 border border-slate-300 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50 focus:bg-white transition-colors">
+                            <input type="text" id="search-records" oninput="filterRecords()"
+                                placeholder="Buscar negocio..."
+                                class="flex-1 min-w-0 px-4 py-2 border border-slate-300 rounded-2xl text-sm outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50 focus:bg-white transition-colors">
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="exportToCSV()" class="flex-1 sm:flex-none px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-sm font-bold transition flex justify-center items-center gap-2 shadow-sm" title="Exportar">
+                            <button onclick="exportToCSV()"
+                                class="flex-1 sm:flex-none px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-sm font-bold transition flex justify-center items-center gap-2 shadow-sm"
+                                title="Exportar">
                                 <i class="fa-solid fa-file-csv"></i> Exportar
                             </button>
                         </div>
@@ -393,7 +640,8 @@
                 <div class="overflow-x-auto rounded-2xl border border-slate-200">
                     <table class="w-full text-left border-collapse whitespace-nowrap">
                         <thead>
-                            <tr class="bg-slate-50 text-slate-600 text-xs uppercase tracking-wider font-bold border-b border-slate-200">
+                            <tr
+                                class="bg-slate-50 text-slate-600 text-xs uppercase tracking-wider font-bold border-b border-slate-200">
                                 <th class="p-4">#</th>
                                 <th class="p-4">Fecha</th>
                                 <th class="p-4">Negocio</th>
@@ -445,37 +693,49 @@
     </main>
 
     <!-- Mobile Navigation -->
-    <nav class="md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-3 pb-8 z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-        <button id="nav-form-btn-mobile" onclick="switchTab('tab-form')" class="tab-btn flex flex-col items-center gap-1 text-amber-600 transition-colors w-1/3">
+    <nav
+        class="md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-3 pb-8 z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <button id="nav-form-btn-mobile" onclick="switchTab('tab-form')"
+            class="tab-btn flex flex-col items-center gap-1 text-amber-600 transition-colors w-1/3">
             <i class="fa-solid fa-pen-to-square text-xl"></i><span class="text-[10px] font-bold">Ficha</span>
         </button>
-        <button id="nav-records-btn-mobile" onclick="switchTab('tab-records')" class="tab-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 transition-colors w-1/3">
+        <button id="nav-records-btn-mobile" onclick="switchTab('tab-records')"
+            class="tab-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 transition-colors w-1/3">
             <i class="fa-solid fa-database text-xl"></i><span class="text-[10px] font-bold">Registros</span>
         </button>
-        <button id="nav-dashboard-btn-mobile" onclick="switchTab('tab-dashboard')" class="tab-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 transition-colors w-1/3">
+        <button id="nav-dashboard-btn-mobile" onclick="switchTab('tab-dashboard')"
+            class="tab-btn flex flex-col items-center gap-1 text-slate-400 hover:text-slate-600 transition-colors w-1/3">
             <i class="fa-solid fa-chart-pie text-xl"></i><span class="text-[10px] font-bold">Informe</span>
         </button>
     </nav>
 
     <!-- Modal Detalles -->
-    <div id="record-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col transform scale-95 transition-transform duration-300">
+    <div id="record-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col transform scale-95 transition-transform duration-300">
             <div class="px-6 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
                 <h3 class="text-lg font-black text-slate-800" id="modal-title">Detalles de Ficha</h3>
-                <button onclick="closeModal()" class="text-slate-400 hover:text-rose-500 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-rose-50"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                <button onclick="closeModal()"
+                    class="text-slate-400 hover:text-rose-500 transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-rose-50"><i
+                        class="fa-solid fa-xmark fa-lg"></i></button>
             </div>
             <div class="p-6 overflow-y-auto flex-grow" id="modal-body">
                 <!-- Se inyecta info -->
             </div>
             <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end">
-                <button onclick="closeModal()" class="px-6 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-sm font-bold transition">Cerrar</button>
+                <button onclick="closeModal()"
+                    class="px-6 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-sm font-bold transition">Cerrar</button>
             </div>
         </div>
     </div>
 
     <!-- Notification Toast -->
-    <div id="notification" class="fixed bottom-24 md:bottom-4 right-4 flex items-center bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-xl transition-all transform duration-300 translate-y-10 opacity-0 z-50 pointer-events-none">
-        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+    <div id="notification"
+        class="fixed bottom-24 md:bottom-4 right-4 flex items-center bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-xl transition-all transform duration-300 translate-y-10 opacity-0 z-50 pointer-events-none">
+        <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
         <span id="notif-text" class="font-medium text-sm">Guardado correctamente</span>
     </div>
 
@@ -520,7 +780,7 @@
         function toggleSection(sectionId) {
             const allContents = ['content-sec1', 'content-sec2', 'content-sec3'];
             const allIcons = ['icon-sec1', 'icon-sec2', 'icon-sec3'];
-            
+
             allContents.forEach((id, index) => {
                 const content = document.getElementById(id);
                 const icon = document.getElementById(allIcons[index]);
@@ -642,7 +902,7 @@
 
             document.getElementById('baseline-form').reset();
             toggleRedes(false);
-            
+
             // Re-abrir la seccion 1 por defecto al resetear
             toggleSection('sec1');
 
@@ -709,9 +969,9 @@
             if (!record) return;
 
             document.getElementById('modal-title').textContent = record.nombreNegocio;
-            
+
             let detailsHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">`;
-            
+
             const renderQA = (q, a) => {
                 if (!a) return '';
                 return `
@@ -724,7 +984,7 @@
             detailsHTML += renderQA('Propietario', record.propietario);
             detailsHTML += renderQA('Ubicación', record.ubicacion);
             detailsHTML += renderQA('Teléfono', record.telefono);
-            
+
             detailsHTML += renderQA('1. Sexo', record.q1);
             detailsHTML += renderQA('2. Edad', record.q2);
             detailsHTML += renderQA('3. Nivel Instrucción', record.q3);
@@ -755,7 +1015,7 @@
 
             detailsHTML += `</div>`;
             document.getElementById('modal-body').innerHTML = detailsHTML;
-            
+
             const modal = document.getElementById('record-modal');
             modal.classList.remove('hidden');
             modal.classList.add('flex');
@@ -854,4 +1114,5 @@
         }
     </script>
 </body>
+
 </html>
