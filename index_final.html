@@ -762,9 +762,39 @@
             try {
                 if (SCRIPT_URL !== 'TU_URL_DE_APPS_SCRIPT_AQUI') {
                     const response = await fetch(SCRIPT_URL);
-                    const data = await response.json();
-                    if (data && data.length > 0) {
-                        records = data;
+                    const rawData = await response.json();
+                    if (rawData && rawData.length > 0) {
+                        records = rawData.map(r => ({
+                            id: r.ID || r.id,
+                            fecha: r.Fecha_Registro || r.fecha,
+                            nombreNegocio: r.Nombre_Negocio || r.nombreNegocio,
+                            propietario: r.Propietario || r.propietario,
+                            ubicacion: r.Ubicacion || r.ubicacion,
+                            telefono: r.Telefono || r.telefono,
+                            q1: r.P1_Sexo || r.q1,
+                            q2: r.P2_Edad || r.q2,
+                            q3: r.P3_Nivel_Instruccion || r.q3,
+                            q4: r.P4_Anos_Experiencia || r.q4,
+                            q5: r.P5_Num_Personas || r.q5,
+                            q6: r.P6_Unica_Fuente_Ingreso || r.q6,
+                            q7: r.P7_Usa_Redes_Sociales || r.q7,
+                            q8: r.P8_Que_Redes_Usa || r.q8,
+                            q9: r.P9_Tiempo_Redes || r.q9,
+                            q10: r.P10_Frecuencia_Publicacion || r.q10,
+                            q11: r.P11_Objetivo_Principal || r.q11,
+                            q12: r.P12_Nivel_Interaccion || r.q12,
+                            q13: r.P13_Invertido_Publicidad || r.q13,
+                            q14: r.P14_Resultados_Obtenidos || r.q14,
+                            q15: r.P15_Usa_Herramientas_Medir || r.q15,
+                            q16: r.P16_Calendario_Contenidos || r.q16,
+                            q17: r.P17_Metodo_Pago || r.q17,
+                            q18: r.P18_Practica_Negocio || r.q18,
+                            q19: r.P19_Como_Fija_Precio || r.q19,
+                            q20: r.P20_Ganancias_Mensuales || r.q20,
+                            q21: r.P21_Ventas_Diarias || r.q21,
+                            q22: r.P22_Porcentaje_Reinvierte || r.q22,
+                            q23: r.P23_Gasto_Consume_Ingresos || r.q23
+                        }));
                         saveRecords();
                     }
                 }
@@ -889,9 +919,40 @@
 
             try {
                 if (SCRIPT_URL !== 'TU_URL_DE_APPS_SCRIPT_AQUI') {
+                    const googleRecord = {
+                        ID: newRecord.id,
+                        Fecha_Registro: newRecord.fecha,
+                        Nombre_Negocio: newRecord.nombreNegocio,
+                        Propietario: newRecord.propietario,
+                        Ubicacion: newRecord.ubicacion,
+                        Telefono: newRecord.telefono,
+                        P1_Sexo: newRecord.q1,
+                        P2_Edad: newRecord.q2,
+                        P3_Nivel_Instruccion: newRecord.q3,
+                        P4_Anos_Experiencia: newRecord.q4,
+                        P5_Num_Personas: newRecord.q5,
+                        P6_Unica_Fuente_Ingreso: newRecord.q6,
+                        P7_Usa_Redes_Sociales: newRecord.q7,
+                        P8_Que_Redes_Usa: newRecord.q8,
+                        P9_Tiempo_Redes: newRecord.q9,
+                        P10_Frecuencia_Publicacion: newRecord.q10,
+                        P11_Objetivo_Principal: newRecord.q11,
+                        P12_Nivel_Interaccion: newRecord.q12,
+                        P13_Invertido_Publicidad: newRecord.q13,
+                        P14_Resultados_Obtenidos: newRecord.q14,
+                        P15_Usa_Herramientas_Medir: newRecord.q15,
+                        P16_Calendario_Contenidos: newRecord.q16,
+                        P17_Metodo_Pago: newRecord.q17,
+                        P18_Practica_Negocio: newRecord.q18,
+                        P19_Como_Fija_Precio: newRecord.q19,
+                        P20_Ganancias_Mensuales: newRecord.q20,
+                        P21_Ventas_Diarias: newRecord.q21,
+                        P22_Porcentaje_Reinvierte: newRecord.q22,
+                        P23_Gasto_Consume_Ingresos: newRecord.q23
+                    };
                     await fetch(SCRIPT_URL, {
                         method: 'POST',
-                        body: JSON.stringify(newRecord)
+                        body: JSON.stringify(googleRecord)
                     });
                 }
                 showNotification('Ficha registrada y sincronizada', 'success');
