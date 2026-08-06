@@ -1073,6 +1073,8 @@
             }
         ];
 
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzyO7I-OqEu_inPmBtQU4j9w2hdot3Cf-fRrcQSc8ZD-VC1R056ojdphqrXAlUBvcu7fA/exec'; // API Google Sheets
+
         let records = [];
         try {
             const stored = localStorage.getItem('cenestur_fichas');
@@ -1094,8 +1096,26 @@
         let barChartInstance = null;
 
         // Initialization
-        window.onload = function () {
+        window.onload = async function () {
             renderVariablesForm();
+
+            // Intentar cargar desde Google Sheets
+            try {
+                if (SCRIPT_URL) {
+                    const response = await fetch(SCRIPT_URL);
+                    const sheetRecords = await response.json();
+                    if (sheetRecords && Array.isArray(sheetRecords)) {
+                        if (sheetRecords.length > 0) {
+                            // Invertir para que los más nuevos salgan primero (ya que la hoja añade al final)
+                            records = sheetRecords.reverse();
+                            saveRecords(); // Actualizar caché local
+                        }
+                    }
+                }
+            } catch (err) {
+                console.warn('No se pudo cargar desde Google Sheets, usando caché local.', err);
+            }
+
             updateCounter();
             renderRecordsTable();
             initCharts();
@@ -1311,6 +1331,30 @@
             updateCounter();
             renderRecordsTable();
             updateDashboardMetrics();
+
+            // Guardar en Google Sheets (en segundo plano)
+            if (SCRIPT_URL) {
+                const payload = {
+                    ...newRecord,
+                    nombreNegocio: newRecord.businessName,
+                    propietario: newRecord.ownerName,
+                    sector: newRecord.sector,
+                    ubicacion: newRecord.locationZone,
+                    telefono: newRecord.phone,
+                    anosOperacion: newRecord.yearsOperating,
+                    segmento: newRecord.segment,
+                    puntajeMadurez: newRecord.totalScore,
+                    porcentajeMadurez: Math.round((newRecord.totalScore / 75) * 100),
+                    estadoDiagnostico: newRecord.totalScore < 40 ? 'Crítico' : (newRecord.totalScore < 60 ? 'En Desarrollo' : 'Competitivo')
+                };
+
+                fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(payload)
+                }).then(response => response.json())
+                    .then(data => console.log("Guardado en Sheets:", data))
+                    .catch(err => console.error("Error guardando en Sheets:", err));
+            }
 
             // Reset Form
             document.getElementById('baseline-form').reset();
